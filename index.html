@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <script src="cordova.js"></script>
+  </head>
+  <body>
+  <ion-side-menus>
+    <!-- 主体 -->
+    <ion-side-menu-content ng-controller="contentCtrl">
+      <!-- 头部 -->
+      <ion-nav-bar class="bar-stable" id="titleBar" ng-controller="navBarCtrl">
+        <ion-nav-buttons side="left">
+          <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+        </ion-nav-buttons>
+        <ion-nav-back-button ng-click="backClick()">
+        </ion-nav-back-button>
+      </ion-nav-bar>
+      <!-- 内容 -->
+      <ion-nav-view></ion-nav-view>
+
+    </ion-side-menu-content>
+
+    <!-- 左侧菜单 -->
+    <ion-side-menu side="left" width="100" class="dark-bg" ng-controller="SideLeftCtrl">
+      <ion-list class="left-side">
+        <ion-item class="dark-bg text-center"><a href="#/dash" menu-toggle="left"><img src="img/ionic.png" width="50" height="50" /></a></ion-item>
+        <ion-item class="light item-divider" ng-click="login()"><i class="ion-person"></i>&nbsp;登陆</ion-item>
+        <ion-item class="light item-divider" ng-click="logOut()"><i class="ion-android-exit"></i>&nbsp;退出</ion-item>
+      </ion-list>
+    </ion-side-menu>
+
+  </ion-side-menus>
+  <script src="js/require.js" ></script>
+  <script>
+    require(['require', './js/config-require.js'], function (require, config) {
+        config.urlArgs = 'bust=v0.4.0'+Math.random();//测试环境防止缓存
+        window.require.config(config);
+        require([
+          './js/controllers/accountCtrl',
+          './js/controllers/chatDetailCtrl',
+          './js/controllers/chatsCtrl',
+          './js/controllers/contentCtrl',
+          './js/controllers/dashCtrl',
+          './js/controllers/loginCtrl',
+          './js/controllers/navBarCtrl',
+          './js/controllers/registCtrl',
+          './js/controllers/sideLeftCtrl',
+          './js/main'
+        ]);
+    });
+  </script>
+  </body>
+</html>
