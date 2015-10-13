@@ -1,0 +1,55 @@
+/* Empty. Add your own CSS if you like */
+.left-side ion-item:nth-child(2),.left-side ion-item:nth-child(3){
+    background:#313131;
+    border-color: #444;
+}
+.chats-item{
+    margin: 10px 0;
+}
+.chatsClear{
+
+    clear: both;
+}
+.chats-head{
+    float: left;
+    margin-right: 20px;
+}
+.chats{
+    position: relative;
+    float: left;
+    padding: 6px 6px;
+    background-color: #3583FF;
+    border-radius:4px ;
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+    max-width: 80%;
+}
+.chats:before{
+    content: " ";
+    position: absolute;
+    right: 100%;
+    top: 8px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-right: 11px solid #3583FF;
+    border-bottom: 8px solid transparent;
+}
+.chatsMy .chats-head{
+    float: right;
+    margin-right:0;
+    margin-left: 20px;
+}
+.chatsMy .chats{
+    float: right;
+    background-color: #69717d;
+}
+.chatsMy .chats:before{
+    float: right;
+    left: 100%;
+    border-right: 0;
+    border-top: 8px solid transparent;
+    border-left: 11px solid #69717d;
+    border-bottom: 8px solid transparent;
+ }
