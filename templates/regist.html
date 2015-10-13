@@ -1,0 +1,26 @@
+<ion-view view-title="注册">
+    <ion-content>
+        <ion-list>
+            <ion-item class="item-input">
+                <i class="icon ion-person placeholder-icon"></i>
+                <input type="text" class="" placeholder="手机号" ng-model="User.name">
+            </ion-item>
+            <ion-item class="item-input">
+                <i class="icon ion-locked placeholder-icon"></i>
+                <input type="password" class="" placeholder="密码" ng-model="User.pwd">
+            </ion-item>
+            <ion-item class="item-input">
+                <i class="icon ion-locked placeholder-icon"></i>
+                <input type="password" class="" placeholder="确认密码" ng-model="User.entPwd">
+            </ion-item>
+            <ion-item class="item-input">
+                <i class="icon ion-locked placeholder-icon"></i>
+                <input type="text" class="" placeholder="验证码" width="50" value="0" ng-model="User.code">
+            </ion-item>
+            <ion-item style="border-bottom: 0;">
+                <button class="button button-block button-positive" ng-click="btnRegist(User)" style="min-height:35px;line-height: 30px">注册</button>
+            </ion-item>
+        </ion-list>
+
+    </ion-content>
+</ion-view>
