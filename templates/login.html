@@ -1,0 +1,20 @@
+<ion-view view-title="登陆">
+    <ion-content>
+        <ion-list>
+            <ion-item class="item-input">
+                    <i class="icon ion-person placeholder-icon"></i>
+                    <input type="text" class="" placeholder="用户名/手机号" ng-model="User.name">
+            </ion-item>
+            <ion-item class="item-input">
+                <i class="icon ion-locked placeholder-icon"></i>
+                <input type="password" class="" placeholder="密码" ng-model="User.pwd">
+            </ion-item>
+            <ion-item style="border-bottom: 0;">
+                <button class="button button-block button-positive" ng-click="btnLogin(User)" style="min-height:35px;line-height: 30px">登陆</button>
+            <a style="font-size: 10px;" href="#/regist">注册一个</a>
+            </ion-item>
+
+        </ion-list>
+
+    </ion-content>
+</ion-view>
