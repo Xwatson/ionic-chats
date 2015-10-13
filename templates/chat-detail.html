@@ -1,0 +1,16 @@
+
+<ion-view view-title="{{chat.name?chat.name:chat.registId}}">
+  <ion-content class="padding">
+    <chat-message messages="Message[chat._id]" userId="{{UserID}}">
+    </chat-message>
+  </ion-content>
+  <div class="bar bar-footer item-input-inset">
+    <label class="item-input-wrapper">
+      <input type="text" ng-model="text">
+    </label>
+    <button class="button button-positive" style="min-height: 25px;line-height: 25px" ng-click="sendMsg()">
+      发送
+    </button>
+  </div>
+
+</ion-view>
